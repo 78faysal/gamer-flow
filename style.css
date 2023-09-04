@@ -4,6 +4,10 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+body{
+    margin: 0px;
+}
+
 /* shared styles  */
 .gradient-text {
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -13,11 +17,131 @@
 }
 
 .primary-btn {
+    border: none;
     border-radius: 48px;
+    padding: 15px 30px;
+    color: white;
     background: linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%);
 }
 
 .secoundary-btn {
+    border: none;
     border-radius: 48px;
     background: #4EC5F7;
+    padding: 15px 30px;
+    color: white;
+}
+
+.container{
+    max-width: 1150px;
+    margin: 0px auto;
+}
+
+.section-title{
+    font-size: 3rem;
+    /* text-align: center; */
+    margin: 10px 0px;
+}
+
+.light-gray{
+    color: #534C64;
+}
+
+
+/* navbar style  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 10px 100px;
+}
+
+nav ul,
+.nav-logo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img{
+    width: 80%;
+}
+
+.nav-logo h3{
+    font-size: 2.5rem;
+    margin: 0px;
+}
+
+nav ul li {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+nav ul .nav-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.10);
+    padding: 10px;
+}
+
+
+/* banner styles  */
+.banner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-content > p{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0px;
+}
+.banner .banner-content h1{
+    font-size: 5rem;
+    margin: 0px;
+}
+.banner img{
+    width: 100%;
+}
+
+
+/* funny videos section  */
+.funny-video{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.videos-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.videos-container img{
+    width: 100%;
+}
+
+
+
+/* responsive styles  */
+@media screen and (max-width: 576px) {
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        padding: 0px;
+    }
+    /* .nav-logo img{
+        width: ;
+    } */
+    .banner, .videos-container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
 }
