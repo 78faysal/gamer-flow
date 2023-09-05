@@ -133,6 +133,26 @@ nav ul .nav-btn {
     width: 100%;
 }
 
+.video {
+    position: relative;
+}
+
+.video .play-icon {
+    width: 80px;
+    top: 30%;
+    left: 40%;
+    position: absolute;
+    display: none;
+}
+
+.video:hover {
+    filter: brightness(0.3);
+}
+
+.video:hover .play-icon {
+    display: block;
+    filter: grayscale(100%);
+}
 
 /* instant play section  */
 .instant-play {
@@ -219,14 +239,14 @@ nav ul .nav-btn {
 }
 
 /* footer styles */
-footer{
+footer {
     background: #0B0223;
     color: white;
     text-align: center;
     padding: 50px 200px;
 }
 
-.footer-logo{
+.footer-logo {
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -234,29 +254,29 @@ footer{
     margin-bottom: 30px;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 80px;
     height: 50px;
 }
 
-footer .section-tab{
+footer .section-tab {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 20px;
 }
 
-.footer-img-icons{
+.footer-img-icons {
     display: flex;
     margin-bottom: 20px;
 }
 
-.footer-img-icons img{
+.footer-img-icons img {
     filter: brightness(150%);
     width: 8%;
     margin: 10px auto;
 }
 
-.footer-terms{
+.footer-terms {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 20px;
@@ -291,6 +311,12 @@ footer .section-tab{
         padding: 0px;
     }
 
+    /* videos styles  */
+    .video .play-icon {
+        top: 40%;
+        left: 40%;
+    }
+
     .banner,
     .videos-container,
     .careers {
@@ -322,6 +348,7 @@ footer .section-tab{
     .game img {
         width: 30%;
     }
+
     .game p {
         font-weight: 400;
         font-size: small;
@@ -332,7 +359,7 @@ footer .section-tab{
         padding: 20px;
     }
 
-    footer .section-tab{
+    footer .section-tab {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -340,17 +367,28 @@ footer .section-tab{
 
 /* responsive for tablel  */
 @media screen and (min-width: 576px) and (max-width: 992px) {
+
     .section-title,
     .nav-logo h3 {
         font-size: 2rem;
     }
 
-    nav{
+    nav {
         flex-direction: column;
         gap: 20px;
     }
 
-    .banner, .funny-video, .instant-play, .careers{
+    /* videos styles  */
+    .video .play-icon {
+        width: 50px;
+        top: 25%;
+        left: 30%;
+    }
+
+    .banner,
+    .funny-video,
+    .instant-play,
+    .careers {
         padding: 20px;
     }
 
@@ -361,7 +399,7 @@ footer .section-tab{
         width: 50%;
     }
 
-    .careers{
+    .careers {
         grid-template-columns: 1fr;
     }
 
